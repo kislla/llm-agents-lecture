@@ -61,7 +61,7 @@
 
 - Agent = LLM + tools + a loop: plan → act → observe → repeat.
 - Sub-agents = child processes spawned with fresh, clean context.
-- MCP = "USB-C for AI" — one open standard connecting the model to terminal, browser, Jira, anything.
+- MCP = one open standard connecting the model to terminal, browser, Jira, anything — think "USB-C for AI".
 - This is the plumbing that makes everything in Act II and III possible.
 
 → With agents and MCP defined, here's how Claude actually packages capabilities — plugins and skills.
@@ -190,7 +190,7 @@
 
 ## Slide 13 — GSD (get-shit-done)
 
-- Context rot: long sessions degrade — the model gets noisier the longer it runs.
+- Context rot: long sessions degrade — as the chat history grows, the model's focus dilutes.
 - GSD spawns fresh sub-agents per task, each with clean context.
 - Adds quality gates and an autonomous mode on top.
 - Install: `npx get-shit-done-cc --claude --global`.
@@ -206,6 +206,7 @@
 - **context-mode**: keeps the *current* session lean — sandboxes noisy tool output, session snapshots survive compaction.
   - `/plugin marketplace add mksglu/context-mode` + `/plugin install context-mode@context-mode`.
 - Important distinction: context-mode is about context-window *hygiene*, not about switching between project contexts.
+- Pacing: ~90 sec here — land the distinction (memory across sessions vs context hygiene now) before moving on.
 
 → Memory and hygiene sorted — last two power-ups are about polish and safety.
 
@@ -226,7 +227,7 @@
 
 - "Take a photo of this slide" — say it explicitly, pause for phones.
 - One terminal-style block with all seven install commands from today.
-- QR code placeholder for the same list online.
+- QR code placeholder for the same list online (if no QR URL was provided, just show the terminal block — the commands are the payoff).
 - This is the slide people actually act on after the talk — give it a beat.
 
 → Last slide — let's zoom out to the one idea I want you to leave with.
