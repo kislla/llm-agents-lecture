@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Level Up — LLM Agents &amp; Claude Desktop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; background: #000; overflow: hidden; }
+  .viewport { position: fixed; inset: 0; display: grid; place-items: center; background: #000; }
+  .stage { width: 1920px; height: 1080px; position: relative; background: #04080a; overflow: hidden; transform-origin: center;
+    font-family: 'JetBrains Mono', monospace; }
+
+  /* CRT atmosphere */
+  .scanlines { position: absolute; inset: 0; z-index: 5; pointer-events: none;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,0.32) 0 1px, transparent 1px 4px); opacity: 0.5; }
+  .vignette { position: absolute; inset: 0; z-index: 4; pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 52%, rgba(0,0,0,0.55) 100%); }
+  .phosphor { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 42%, rgba(45,212,191,0.07), transparent 62%); }
+
+  /* terminal chrome */
+  .bar { position: absolute; top: 0; left: 0; right: 0; height: 74px; display: flex; align-items: center; padding: 0 44px;
+    border-bottom: 1px solid rgba(45,212,191,0.18); background: rgba(5,12,13,0.7); z-index: 3; }
+  .lights { display: flex; gap: 14px; }
+  .lights i { width: 20px; height: 20px; border-radius: 50%; display: block; }
+  .lights i:nth-child(1){ background:#ff5f57; } .lights i:nth-child(2){ background:#febc2e; } .lights i:nth-child(3){ background:#28c840; }
+  .bar .title { flex: 1; text-align: center; color: #46665f; font-size: 21px; letter-spacing: 2px; }
+
+  .term { position: absolute; top: 74px; left: 0; right: 0; bottom: 0; padding: 90px 150px; z-index: 2; }
+  .line { font-size: 30px; color: #7da39b; line-height: 2.1; white-space: pre; opacity: 0; }
+  .line .p { color: #2dd4bf; }
+  .line .ok { color: #28c840; }
+  .line.show { opacity: 1; }
+
+  .hero { margin-top: 56px; opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .hero.show { opacity: 1; transform: none; }
+  .hero h1 { font-weight: 800; font-size: 112px; line-height: 1.08; letter-spacing: -2px; color: #e8f4f2;
+    text-shadow: 0 0 38px rgba(45,212,191,0.35); }
+  .hero h1 em { font-style: normal; color: #2dd4bf; }
+  .hero .sub { margin-top: 30px; font-weight: 300; font-size: 34px; color: #7da39b; }
+  .hero .sub b { color: #5eead4; font-weight: 700; }
+  .tags { margin-top: 42px; display: flex; gap: 18px; }
+  .tag { border: 1px solid rgba(45,212,191,0.4); color: #5eead4; padding: 10px 22px; font-size: 24px; border-radius: 6px;
+    background: rgba(13,148,136,0.08); }
+
+  .cursor { display: inline-block; width: 17px; height: 36px; background: #2dd4bf; vertical-align: -6px; margin-left: 6px;
+    animation: blink 1s steps(1) infinite; box-shadow: 0 0 16px rgba(45,212,191,0.8); }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  .foot { position: absolute; left: 150px; right: 150px; bottom: 70px; display: flex; justify-content: space-between;
+    color: #46665f; font-size: 22px; letter-spacing: 1px; z-index: 3; opacity: 0; transition: opacity .6s ease; }
+  .foot.show { opacity: 1; }
+  .foot .u { color: #7da39b; }
+
+  @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+</style>
+</head>
+<body>
+<div class="viewport">
+  <div class="stage" id="stage">
+    <div class="phosphor"></div>
+    <div class="bar">
+      <div class="lights"><i></i><i></i><i></i></div>
+      <div class="title">edward@ariel-u : ~/lectures/llm-agents — claude</div>
+    </div>
+    <div class="term">
+      <div class="line" id="l1"><span class="p">$</span> whoami</div>
+      <div class="line" id="l2">edward.kisller — senior solutions developer · climbing instructor</div>
+      <div class="line" id="l3"><span class="p">$</span> claude --start-lecture llm-agents</div>
+      <div class="line" id="l4">loading skills [██████████] <span class="ok">done</span> · plugins <span class="ok">ok</span> · mcp <span class="ok">connected</span></div>
+      <div class="hero" id="hero">
+        <h1>LEVEL UP:<br>LLM AGENTS &amp; <em>CLAUDE DESKTOP</em><span class="cursor"></span></h1>
+        <p class="sub">Automating your day-to-day CS workflow with <b>skills</b>, <b>plugins</b>, and <b>MCP</b></p>
+        <div class="tags"><span class="tag">./skills</span><span class="tag">./plugins</span><span class="tag">./mcp</span></div>
+      </div>
+    </div>
+    <div class="foot" id="foot"><span>Edward Kisller · <span class="u">Ariel University</span></span><span>[→] next</span></div>
+    <div class="vignette"></div>
+    <div class="scanlines"></div>
+  </div>
+</div>
+<script>
+  function fit() {
+    var s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+    document.getElementById('stage').style.transform = 'scale(' + s + ')';
+  }
+  window.addEventListener('resize', fit); fit();
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var steps = ['l1','l2','l3','l4','hero','foot'];
+  if (reduced) {
+    steps.forEach(function(id){ document.getElementById(id).classList.add('show'); });
+  } else {
+    var delays = [300, 900, 1600, 2400, 3100, 3700];
+    steps.forEach(function(id, i){
+      setTimeout(function(){ document.getElementById(id).classList.add('show'); }, delays[i]);
+    });
+  }
+</script>
+</body>
+</html>

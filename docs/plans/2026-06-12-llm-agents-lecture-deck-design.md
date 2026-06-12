@@ -124,13 +124,15 @@ Remix these traits; do **not** copy layouts 1:1:
 7. **Window chrome:** macOS traffic-light window frames for terminal cards and app mockups.
 8. **Glow titles:** big, letterspaced, soft-glow headlines for dividers and the LIVE DEMO slide.
 
-### Working palette (frontend-slides exploration may refine)
+### Working palette — REFINED during style exploration (2026-06-12): Spotify palette
 
-- Background base `#05090A` family; glow layers: teal radial gradients at 4–8% opacity.
-- Accent ramp: `#5EEAD4` (bright cyan) · `#2DD4BF` (primary teal) · `#0D9488` (deep teal).
-- Text: `#E8F4F2` primary; desaturated teal-gray secondary.
+Edward picked Style A ("edge-lit glass") with Spotify colors replacing the teal ramp:
+
+- Background `#121212` (Spotify app bg); chrome/terminal `#191414` (brand black); glow layers: green radial gradients at 4–8% opacity.
+- Accent: `#1ED760` (bright green) · `#1DB954` (Spotify green primary).
+- Text: `#FFFFFF` primary · `#B3B3B3` subdued · `#6A6A6A` faint.
 - Semantic red reserved for the LIVE pulse dot.
-- Type: geometric sans for headlines (wide letterspacing), monospace for all commands.
+- Type (locked via probe): `Chakra Petch` display · `Gantari` body · `JetBrains Mono` commands.
 
 ### Slide-to-visual homage map
 
