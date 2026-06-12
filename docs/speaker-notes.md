@@ -149,6 +149,7 @@
 
 ## Slide 11a — Hidden Fallback (skill-creator conversation)
 
+- Navigation: press **B** on the LIVE DEMO slide to jump here. Arrows move between 11a/11b; **B** or **Esc** returns to slide 11. Normal arrow flow never shows these.
 - Pre-baked screenshots of the skill-creator conversation + the generated file tree.
 - Use only if the live demo fails before the run step.
 - Walk through it exactly as if it just happened live — same callback to slide 10's anatomy.

@@ -2,7 +2,8 @@
 
 60-minute lecture for CS BSc undergrads, Ariel University. Presenter: Edward Kisller.
 
-- Deck: `index.html` — open in a browser, press F for fullscreen, arrows to navigate.
+- Deck: `index.html` — open in a browser. Arrows/space navigate, `F` fullscreen, `B` on the LIVE DEMO slide opens the hidden backup slides (`B`/`Esc` returns), `E` toggles inline text editing (Cmd+S downloads your edited copy).
+- Fully offline — fonts and all assets are local; no network needed to present.
 - Design: `docs/plans/2026-06-12-llm-agents-lecture-deck-design.md`
 - Speaker notes + demo runbook: `docs/speaker-notes.md`
 
