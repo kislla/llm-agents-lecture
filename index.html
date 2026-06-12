@@ -121,6 +121,7 @@ img, video, canvas, svg {
         break-after: page; page-break-after: always;
     }
     .slide:last-child { break-after: auto; page-break-after: auto; }
+    .slide[data-hidden] { display: none !important; }
     .deck-controls { display: none !important; }
 }
 
@@ -1394,6 +1395,7 @@ class SlidePresentation {
         document.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
         document.addEventListener('touchend', (e) => {
             if (x0 === null) return;
+            if (this.branch) { x0 = null; return; }   // backup slides exit only via B/Esc
             const dx = e.changedTouches[0].clientX - x0;
             if (Math.abs(dx) > 60) this.show(this.index + (dx < 0 ? 1 : -1));
             x0 = null;
@@ -1402,6 +1404,7 @@ class SlidePresentation {
 
     setupWheelNav() {
         document.addEventListener('wheel', (e) => {
+            if (this.branch) return;                  // backup slides exit only via B/Esc
             const now = Date.now();
             if (now - this.wheelLock < 900 || Math.abs(e.deltaY) < 24) return;
             this.wheelLock = now;
@@ -1496,7 +1499,7 @@ editToggle.addEventListener('mouseenter', () => clearTimeout(hideTimeout));
 editToggle.addEventListener('mouseleave', () => { hideTimeout = setTimeout(() => { if (!editor.isActive) editToggle.classList.remove('show'); }, 400); });
 editToggle.addEventListener('click', () => editor.toggleEditMode());
 document.addEventListener('keydown', (e) => {
-    if ((e.key === 'e' || e.key === 'E') && !e.target.getAttribute('contenteditable')) editor.toggleEditMode();
+    if ((e.key === 'e' || e.key === 'E') && !e.target.closest('[contenteditable="true"]')) editor.toggleEditMode();
     if ((e.metaKey || e.ctrlKey) && e.key === 's') { e.preventDefault(); editor.download(); }
 });
 </script>
