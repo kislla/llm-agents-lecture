@@ -453,6 +453,55 @@ img, video, canvas, svg {
 .dd-row.sel .cmd-name { color: var(--green-bright); }
 
 /* ===========================================
+   ACT II — DIVIDERS, ANATOMY, LIVE DEMO, FALLBACKS
+   =========================================== */
+.s-divider .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 34px; }
+.s-divider .act-no { font-family: var(--font-mono); font-size: 26px; letter-spacing: 14px; color: var(--green); }
+.s-divider h2 { font-family: var(--font-display); font-weight: 700; font-size: 150px; letter-spacing: 4px; color: var(--text); text-shadow: 0 0 90px rgba(30,215,96,0.35); }
+.s-divider h2 .accent { color: var(--green-bright); }
+.s-divider .rule { width: 300px; height: 1px; background: linear-gradient(90deg, transparent, rgba(30,215,96,0.7), transparent); }
+.s-divider .sub { font-family: var(--font-body); font-weight: 300; font-size: 32px; color: var(--text-dim); }
+
+/* ===== SLIDE 10: ANATOMY OF A SKILL ===== */
+.s-anatomy .duo { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; margin-top: 52px; align-items: stretch; }
+.skillmd .term-body { font-size: 24px; line-height: 1.8; }
+.skillmd .fm { color: var(--text-faint); }
+.skillmd .key { color: var(--green-bright); }
+.skillmd .val { color: #d6efe0; }
+.skillmd .md { color: var(--text-dim); }
+.skillmd .hl { background: rgba(29,185,84,0.16); border-radius: 6px; padding: 1px 6px; }
+.callouts { display: flex; flex-direction: column; gap: 24px; justify-content: center; }
+.callout { padding: 28px 34px; }
+.callout .tag { font-family: var(--font-mono); font-size: 19px; letter-spacing: 3px; color: var(--green-bright); }
+.callout .tx { margin-top: 10px; font-family: var(--font-body); font-size: 27px; font-weight: 300; color: var(--text-dim); line-height: 1.45; }
+.callout .tx b { color: var(--text); font-weight: 600; }
+.callout.big { border: 1px solid rgba(30,215,96,0.5); background: linear-gradient(135deg, rgba(29,185,84,0.18), rgba(29,185,84,0.04)); box-shadow: 0 0 60px rgba(29,185,84,0.14); }
+.callout.big .tx { color: var(--text); }
+
+/* ===== SLIDE 11: LIVE DEMO ===== */
+.s-live .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 48px; }
+.s-live .reclabel { display: flex; align-items: center; gap: 20px; font-family: var(--font-mono); font-size: 24px; letter-spacing: 9px; color: #ff5f57; }
+.s-live .recdot { width: 22px; height: 22px; border-radius: 50%; background: #ff4136; box-shadow: 0 0 32px rgba(255,65,54,0.85); animation: pulse 1.4s infinite; }
+.s-live h2 { font-family: var(--font-display); font-weight: 700; font-size: 188px; letter-spacing: 6px; color: var(--text); text-shadow: 0 0 110px rgba(30,215,96,0.45); }
+.s-live h2 .accent { color: var(--green-bright); }
+.s-live .prompt-line {
+    font-family: var(--font-mono); font-size: 27px; color: var(--text-dim); line-height: 1.6;
+    border: 1px solid var(--line-faint); border-radius: 14px; padding: 20px 36px;
+    background: rgba(25,20,20,0.85); max-width: 1560px;
+}
+.s-live .prompt-line .p { color: var(--green-bright); }
+.s-live .bhint { position: absolute; bottom: 80px; right: 96px; font-family: var(--font-mono); font-size: 18px; letter-spacing: 2px; color: var(--text-faint); }
+
+/* ===== HIDDEN FALLBACK SLIDES ===== */
+.s-fb .shot {
+    margin-top: 44px; position: relative; height: 620px; border-radius: 24px; overflow: hidden;
+    border: 2px dashed rgba(30,215,96,0.35); background: rgba(255,255,255,0.02);
+    display: flex; align-items: center; justify-content: center;
+}
+.s-fb .shot .ph { text-align: center; font-family: var(--font-mono); font-size: 24px; color: var(--text-faint); line-height: 2.1; }
+.s-fb .shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #0a0a0a; }
+
+/* ===========================================
    DECK CHROME (outside the stage)
    =========================================== */
 .deck-counter {
@@ -808,6 +857,19 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             <div class="corner right">08</div>
         </section>
 
+        <!-- ============ DIVIDER A → ACT II ============ -->
+        <section class="slide s-divider" data-num="ACT II" aria-label="Act II divider">
+            <div class="glow g1"></div><div class="glow g2"></div>
+            <div class="ring r1"></div>
+            <div class="sweep"></div>
+            <div class="center">
+                <div class="act-no reveal d1">ACT II · ~22 MIN</div>
+                <h2 class="reveal d2" contenteditable="false">Skills, <span class="accent">live</span></h2>
+                <div class="rule reveal d3"></div>
+                <div class="sub reveal d3" contenteditable="false">the part where we build one on stage</div>
+            </div>
+        </section>
+
         <!-- ============ SLIDE 9: SKILL-CREATOR (layout probe) ============ -->
         <section class="slide s-skillcreator" data-num="09" aria-label="skill-creator">
             <div class="glow g2"></div>
@@ -862,6 +924,96 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             <div class="corner right">09</div>
         </section>
 
+        <!-- ============ SLIDE 10: ANATOMY OF A SKILL ============ -->
+        <section class="slide s-anatomy" data-num="10" aria-label="Anatomy of a skill">
+            <div class="glow g1"></div>
+            <div class="ring r1"></div>
+            <div class="frame"></div>
+
+            <div class="content-std">
+                <div class="pill reveal d1"><span class="dot"></span><span contenteditable="false">ACT II — SKILLS, LIVE</span></div>
+                <h2 class="reveal d2" contenteditable="false">Anatomy of a <span class="accent">skill</span></h2>
+
+                <div class="duo">
+                    <div class="term skillmd reveal d3">
+                        <div class="term-bar"><i></i><i></i><i></i><span>linkedin-job-hunter / SKILL.md</span></div>
+                        <div class="term-body">
+                            <div class="fm">---</div>
+                            <div><span class="key">name:</span> <span class="val">linkedin-job-hunter</span></div>
+                            <div><span class="key">description:</span> <span class="val hl">Use when the user wants open</span></div>
+                            <div><span class="val hl">&nbsp;&nbsp;positions on LinkedIn — search &amp; summarize</span></div>
+                            <div class="fm">---</div>
+                            <div class="md"># LinkedIn Job Hunter</div>
+                            <div class="md">1. Open the LinkedIn jobs search…</div>
+                            <div class="md">2. Collect &amp; filter listings…</div>
+                            <div class="md">3. Rank by fit, output a table.</div>
+                        </div>
+                    </div>
+                    <div class="callouts">
+                        <div class="callout glass-card reveal d4">
+                            <div class="tag">THE TRIGGER</div>
+                            <div class="tx" contenteditable="false">The <b>description</b> is all Claude ever sees… until it matches your request.</div>
+                        </div>
+                        <div class="callout glass-card reveal d5">
+                            <div class="tag">THE INSTRUCTIONS</div>
+                            <div class="tx" contenteditable="false">The body loads <b>only when triggered</b> — your expertise, on demand.</div>
+                        </div>
+                        <div class="callout big reveal d6">
+                            <div class="tag">PROGRESSIVE DISCLOSURE</div>
+                            <div class="tx" contenteditable="false">50 installed skills ≈ <b>free</b>. You pay context only for the one you use.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="corner left">ACT II / SKILLS</div>
+            <div class="corner right">10</div>
+        </section>
+
+        <!-- ============ SLIDE 11: LIVE DEMO ============ -->
+        <section class="slide s-live" data-num="11" data-branch=".s-fb" aria-label="Live demo">
+            <div class="glow g2"></div>
+            <div class="frame" style="border-color: rgba(30,215,96,0.12);"></div>
+            <div class="center">
+                <div class="reclabel reveal d1"><span class="recdot"></span>REC</div>
+                <h2 class="reveal d2" contenteditable="false">LIVE <span class="accent">DEMO</span></h2>
+                <div class="prompt-line reveal d3" contenteditable="false"><span class="p">&gt;</span> Create a skill that searches for open software engineering positions on LinkedIn</div>
+            </div>
+            <div class="bhint">[B] BACKUP</div>
+        </section>
+
+        <!-- ============ HIDDEN 11a: FALLBACK — THE BUILD ============ -->
+        <section class="slide s-fb" data-num="11a" data-hidden="true" aria-label="Fallback: the build">
+            <div class="glow g1"></div>
+            <div class="frame"></div>
+            <div class="content-std">
+                <div class="pill reveal d1"><span class="dot"></span><span contenteditable="false">BACKUP — REHEARSAL CAPTURE</span></div>
+                <h2 class="reveal d2" contenteditable="false">The build: <span class="accent">skill-creator</span> at work</h2>
+                <div class="shot reveal d3">
+                    <div class="ph">assets/fallback/build.png<br>screenshot the skill-creator conversation + generated file tree<br>during your rehearsal, drop it here</div>
+                    <img src="assets/fallback/build.png" alt="skill-creator building the LinkedIn skill" onerror="this.style.display='none'">
+                </div>
+            </div>
+            <div class="corner left">BACKUP / [B] OR ESC TO RETURN</div>
+            <div class="corner right">11a</div>
+        </section>
+
+        <!-- ============ HIDDEN 11b: FALLBACK — THE RESULT ============ -->
+        <section class="slide s-fb" data-num="11b" data-hidden="true" aria-label="Fallback: the result">
+            <div class="glow g2"></div>
+            <div class="frame"></div>
+            <div class="content-std">
+                <div class="pill reveal d1"><span class="dot"></span><span contenteditable="false">BACKUP — REHEARSAL CAPTURE</span></div>
+                <h2 class="reveal d2" contenteditable="false">The result: <span class="accent">jobs, found</span></h2>
+                <div class="shot reveal d3">
+                    <div class="ph">assets/fallback/result.png<br>screenshot the skill running — listings table / summary output<br>during your rehearsal, drop it here</div>
+                    <img src="assets/fallback/result.png" alt="LinkedIn job search skill output" onerror="this.style.display='none'">
+                </div>
+            </div>
+            <div class="corner left">BACKUP / [B] OR ESC TO RETURN</div>
+            <div class="corner right">11b</div>
+        </section>
+
     </main>
 </div>
 
@@ -907,6 +1059,13 @@ class SlidePresentation {
     setupKeyboardNav() {
         document.addEventListener('keydown', (e) => {
             if (document.body.classList.contains('editing')) return;   // don't navigate while editing text
+            if (e.key === 'b' || e.key === 'B') { this.branch ? this.exitBranch() : this.enterBranch(); return; }
+            if (e.key === 'Escape' && this.branch) { this.exitBranch(); return; }
+            if (this.branch) {
+                if (['ArrowRight', 'ArrowDown', ' ', 'PageDown'].includes(e.key)) this.renderBranch(this.branchIndex + 1);
+                else if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) this.renderBranch(this.branchIndex - 1);
+                return;
+            }
             switch (e.key) {
                 case 'ArrowRight': case 'ArrowDown': case ' ': case 'PageDown': this.show(this.index + 1); break;
                 case 'ArrowLeft': case 'ArrowUp': case 'PageUp': this.show(this.index - 1); break;
@@ -941,6 +1100,7 @@ class SlidePresentation {
 
     /* show a slide by flow index (normal navigation) */
     show(i) {
+        this.branch = null;
         this.index = Math.max(0, Math.min(i, this.flow.length - 1));
         const target = this.flow[this.index];
         this.slides.forEach((s) => {
@@ -950,6 +1110,30 @@ class SlidePresentation {
         });
         this.counter.innerHTML = '<b>' + (target.dataset.num || this.index + 1) + '</b> / ' + this.flow[this.flow.length - 1].dataset.num;
     }
+
+    /* hidden-branch navigation: B on a slide with data-branch jumps to its
+       backup slides (excluded from normal flow); B or Esc returns. */
+    enterBranch() {
+        const anchor = this.flow[this.index];
+        if (!anchor.dataset.branch) return;
+        this.branch = this.slides.filter((s) => s.dataset.hidden && s.matches(anchor.dataset.branch));
+        if (!this.branch.length) { this.branch = null; return; }
+        this.renderBranch(0);
+    }
+    renderBranch(i) {
+        this.branchIndex = Math.max(0, Math.min(i, this.branch.length - 1));
+        const target = this.branch[this.branchIndex];
+        this.slides.forEach((s) => {
+            const on = s === target;
+            s.classList.toggle('active', on);
+            s.classList.toggle('visible', on);
+        });
+        this.counter.innerHTML = '<b>' + target.dataset.num + '</b> / backup';
+    }
+    exitBranch() {
+        this.branch = null;
+        this.show(this.index);
+    }
 }
 const deck = new SlidePresentation();
 
@@ -958,7 +1142,7 @@ const deck = new SlidePresentation();
    Edits persist to localStorage (per deck version);
    Ctrl/Cmd+S downloads the edited HTML file.
    =========================================== */
-const DECK_VERSION = 'act1-1';   // bumped on every build task so stale edits never mask new slides
+const DECK_VERSION = 'act2-1';   // bumped on every build task so stale edits never mask new slides
 const editor = {
     isActive: false,
     key: 'deck-edits:' + DECK_VERSION,
