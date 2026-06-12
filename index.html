@@ -502,6 +502,73 @@ img, video, canvas, svg {
 .s-fb .shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #0a0a0a; }
 
 /* ===========================================
+   ACT III — POWER-UPS
+   =========================================== */
+.duo2 { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; margin-top: 50px; }
+
+/* ===== SLIDE 12: SUPERPOWERS ===== */
+.s-sp .stack { margin-top: 44px; display: flex; flex-direction: column; gap: 30px; }
+.pipeline { padding: 26px 40px 10px; }
+.pipe-svg .stage-box { fill: rgba(29,185,84,0.12); stroke: rgba(30,215,96,0.55); stroke-width: 1.5; }
+.pipe-svg .stage-box.lit { fill: rgba(29,185,84,0.28); stroke: var(--green-bright); }
+.pipe-svg .flow-line { stroke: rgba(255,255,255,0.45); stroke-width: 1.5; fill: none; stroke-dasharray: 5 7; }
+.pipe-svg text { font-family: var(--font-mono); fill: var(--text); font-size: 22px; letter-spacing: 2px; }
+.pipe-svg text.dim { fill: var(--text-faint); font-size: 18px; }
+.s-sp .row2 { display: grid; grid-template-columns: 1.25fr 1fr; gap: 30px; align-items: stretch; }
+.meta-note { padding: 26px 34px; display: flex; align-items: center; font-family: var(--font-body); font-weight: 300; font-size: 27px; color: var(--text-dim); line-height: 1.5; }
+.meta-note b { color: var(--green-bright); font-weight: 600; }
+
+/* ===== SLIDE 13: GSD ===== */
+.gsd-card { padding: 32px 38px; }
+.gsd-card h4 { font-family: var(--font-mono); font-size: 20px; letter-spacing: 3px; color: var(--text-faint); }
+.gsd-card h4.good { color: var(--green-bright); }
+.rotbar { margin-top: 26px; height: 38px; border-radius: 10px; background: linear-gradient(90deg, #1DB954 0%, #157f3f 40%, #4a4a44 72%, #333 100%); }
+.minibars { margin-top: 26px; display: flex; gap: 14px; }
+.minibars i { flex: 1; height: 38px; border-radius: 10px; display: block; background: linear-gradient(90deg, #1DB954, #1ED760); box-shadow: 0 0 18px rgba(29,185,84,0.3); }
+.gsd-cap { margin-top: 18px; font-family: var(--font-body); font-weight: 300; font-size: 25px; color: var(--text-dim); line-height: 1.45; }
+.gsd-cap b { color: var(--text); font-weight: 600; }
+.chips { display: flex; gap: 18px; margin-top: 30px; }
+.chip2 { border: 1px solid var(--line); border-radius: 999px; padding: 12px 26px; font-family: var(--font-mono); font-size: 21px; color: var(--green-bright); background: rgba(29,185,84,0.07); }
+
+/* ===== SLIDES 14-15: SPLIT TOOL CARDS ===== */
+.mem-card { padding: 36px 42px; display: flex; flex-direction: column; }
+.mem-card .nm { font-family: var(--font-display); font-weight: 700; font-size: 42px; color: var(--text); }
+.mem-card .nm .accent { color: var(--green-bright); }
+.mem-card .tg { margin-top: 8px; font-family: var(--font-body); font-weight: 300; font-size: 26px; color: var(--text-dim); }
+.mem-card ul { margin: 22px 0 28px; list-style: none; }
+.mem-card li { font-family: var(--font-body); font-weight: 300; font-size: 26px; color: var(--text-dim); padding-left: 30px; position: relative; line-height: 1.65; }
+.mem-card li::before { content: '▸'; color: var(--green); position: absolute; left: 0; }
+.mem-card li b { color: var(--text); font-weight: 600; }
+.mini-term { margin-top: auto; border: 1px solid var(--line-faint); border-radius: 12px; background: #191414; padding: 16px 24px; font-family: var(--font-mono); font-size: 20px; line-height: 1.9; color: var(--green-bright); }
+.mini-term .cm { color: var(--text-faint); }
+.fleet text { font-family: var(--font-mono); fill: var(--text-dim); font-size: 17px; letter-spacing: 2px; }
+.fleet .hexa { fill: rgba(29,185,84,0.12); stroke: rgba(30,215,96,0.6); stroke-width: 1.5; }
+.fleet .ctr { fill: rgba(29,185,84,0.26); stroke: var(--green-bright); stroke-width: 2; }
+.fleet line { stroke: rgba(255,255,255,0.4); stroke-width: 1.5; stroke-dasharray: 5 7; }
+
+/* ===== SLIDE 16: CHEAT-SHEET ===== */
+.s-cheat .grid2 { display: grid; grid-template-columns: 1fr 330px; gap: 40px; margin-top: 46px; align-items: stretch; }
+.s-cheat .term-body { font-size: 25px; line-height: 2.0; }
+.s-cheat .term-body .cm { color: var(--text-faint); }
+.qrwrap { display: flex; flex-direction: column; gap: 20px; }
+.qrbox {
+    flex: 1; border: 2px dashed rgba(30,215,96,0.35); border-radius: 20px; position: relative; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+    font-family: var(--font-mono); font-size: 19px; color: var(--text-faint); text-align: center; padding: 24px;
+}
+.qrbox img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #fff; padding: 18px; }
+.photo-cue { text-align: center; font-family: var(--font-display); font-weight: 600; font-size: 30px; color: var(--green-bright); }
+
+/* ===== SLIDE 17: CLOSING ===== */
+.s-close .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 42px; text-align: center; }
+.s-close .big { font-family: var(--font-display); font-weight: 700; font-size: 88px; line-height: 1.15; color: var(--text); text-shadow: 0 0 80px rgba(30,215,96,0.25); }
+.s-close .big .accent { color: var(--green-bright); }
+.s-close .small { font-family: var(--font-body); font-weight: 300; font-size: 33px; color: var(--text-dim); }
+.contact-row { display: flex; gap: 24px; }
+.contact { border: 1px solid var(--line); border-radius: 999px; padding: 14px 34px; font-family: var(--font-mono); font-size: 22px; color: var(--text-dim); background: rgba(29,185,84,0.06); }
+.contact b { color: var(--green-bright); font-weight: 600; }
+
+/* ===========================================
    DECK CHROME (outside the stage)
    =========================================== */
 .deck-counter {
@@ -1014,6 +1081,251 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             <div class="corner right">11b</div>
         </section>
 
+        <!-- ============ DIVIDER B → ACT III ============ -->
+        <section class="slide s-divider" data-num="ACT III" aria-label="Act III divider">
+            <div class="glow g1"></div><div class="glow g2"></div>
+            <div class="ring r2"></div>
+            <div class="sweep"></div>
+            <div class="center">
+                <div class="act-no reveal d1">ACT III · ~13 MIN</div>
+                <h2 class="reveal d2" contenteditable="false">Power-<span class="accent">ups</span></h2>
+                <div class="rule reveal d3"></div>
+                <div class="sub reveal d3" contenteditable="false">the plugins that level up your day-to-day</div>
+            </div>
+        </section>
+
+        <!-- ============ SLIDE 12: SUPERPOWERS ============ -->
+        <section class="slide s-sp" data-num="12" aria-label="superpowers">
+            <div class="glow g1"></div>
+            <div class="ring r1"></div>
+            <div class="frame"></div>
+
+            <div class="content-std">
+                <div class="pill reveal d1"><span class="dot"></span><span contenteditable="false">ACT III — POWER-UPS</span></div>
+                <h2 class="reveal d2" contenteditable="false"><span class="accent">superpowers</span> — discipline for Claude</h2>
+
+                <div class="stack">
+                    <div class="pipeline glass-card reveal d3">
+                        <svg class="pipe-svg" width="1540" height="300" viewBox="0 0 1540 300" aria-hidden="true">
+                            <rect class="stage-box" x="30" y="115" width="200" height="64" rx="14"/>
+                            <text x="130" y="155" text-anchor="middle">TESTS</text>
+                            <line class="flow-line" x1="230" y1="147" x2="330" y2="147"/>
+                            <rect class="stage-box" x="330" y="115" width="280" height="64" rx="14"/>
+                            <text x="470" y="155" text-anchor="middle">BRAINSTORM</text>
+                            <line class="flow-line" x1="610" y1="147" x2="710" y2="147"/>
+                            <rect class="stage-box lit" x="710" y="115" width="220" height="64" rx="14"/>
+                            <text x="820" y="155" text-anchor="middle">REVIEW</text>
+                            <path class="flow-line" d="M930 147 C 1030 147, 1030 57, 1130 57"/>
+                            <path class="flow-line" d="M930 147 C 1030 147, 1030 237, 1130 237"/>
+                            <rect class="stage-box" x="1130" y="25" width="280" height="64" rx="14"/>
+                            <text x="1270" y="65" text-anchor="middle">SPEC MATCH</text>
+                            <rect class="stage-box" x="1130" y="205" width="300" height="64" rx="14"/>
+                            <text x="1280" y="245" text-anchor="middle">CODE QUALITY</text>
+                            <text class="dim" x="130" y="215" text-anchor="middle">write them first</text>
+                            <text class="dim" x="470" y="215" text-anchor="middle">design before code</text>
+                            <text class="dim" x="820" y="215" text-anchor="middle">twice, always</text>
+                        </svg>
+                    </div>
+                    <div class="row2">
+                        <div class="term reveal d4">
+                            <div class="term-bar"><i></i><i></i><i></i><span>claude — plugin install</span></div>
+                            <div class="term-body"><span class="prompt">&gt;</span><span class="cmd" contenteditable="false">/plugin install superpowers@claude-plugins-official</span></div>
+                        </div>
+                        <div class="meta-note glass-card reveal d5">
+                            <span contenteditable="false">Senior-engineer workflow, enforced. <b>This very lecture was planned with it.</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="corner left">ACT III / POWER-UPS</div>
+            <div class="corner right">12</div>
+        </section>
+
+        <!-- ============ SLIDE 13: GSD ============ -->
+        <section class="slide s-gsd" data-num="13" aria-label="get-shit-done">
+            <div class="glow g2"></div>
+            <div class="ring r2"></div>
+            <div class="frame"></div>
+
+            <div class="content-std">
+                <div class="pill reveal d1"><span class="dot"></span><span contenteditable="false">ACT III — POWER-UPS</span></div>
+                <h2 class="reveal d2" contenteditable="false"><span class="accent">GSD</span> — get-shit-done</h2>
+
+                <div class="duo2">
+                    <div class="gsd-card glass-card reveal d3">
+                        <h4>ONE LONG SESSION</h4>
+                        <div class="rotbar"></div>
+                        <div class="gsd-cap" contenteditable="false"><b>Context rot:</b> as the chat grows, focus dilutes — requirements get forgotten, corners get cut.</div>
+                    </div>
+                    <div class="gsd-card glass-card reveal d4">
+                        <h4 class="good">GSD: FRESH SUB-AGENT PER TASK</h4>
+                        <div class="minibars"><i></i><i></i><i></i><i></i></div>
+                        <div class="gsd-cap" contenteditable="false">Every task gets a <b>clean context window</b> — the full power of the model, not the leftovers.</div>
+                    </div>
+                </div>
+
+                <div class="chips reveal d5">
+                    <span class="chip2">quality gates</span>
+                    <span class="chip2">scope-drop detection</span>
+                    <span class="chip2">autonomous mode</span>
+                </div>
+
+                <div class="term reveal d6" style="margin-top: 30px;">
+                    <div class="term-bar"><i></i><i></i><i></i><span>terminal — one-time install</span></div>
+                    <div class="term-body"><span class="prompt">$</span><span class="cmd" contenteditable="false">npx get-shit-done-cc --claude --global</span></div>
+                </div>
+            </div>
+
+            <div class="corner left">ACT III / POWER-UPS</div>
+            <div class="corner right">13</div>
+        </section>
+
+        <!-- ============ SLIDE 14: FIXING THE AMNESIA ============ -->
+        <section class="slide s-mem" data-num="14" aria-label="Memory plugins">
+            <div class="glow g1"></div>
+            <div class="ring r1"></div>
+            <div class="frame"></div>
+
+            <div class="content-std">
+                <div class="pill reveal d1"><span class="dot"></span><span contenteditable="false">ACT III — POWER-UPS · REMEMBER SLIDE 5? SESSIONS DIE.</span></div>
+                <h2 class="reveal d2" contenteditable="false">Fixing the <span class="accent">amnesia</span></h2>
+
+                <div class="duo2">
+                    <div class="mem-card glass-card reveal d3">
+                        <div class="nm">claude-<span class="accent">mem</span></div>
+                        <div class="tg" contenteditable="false">memory across sessions</div>
+                        <ul>
+                            <li contenteditable="false"><b>Auto-captures</b> your work into a local, searchable DB</li>
+                            <li contenteditable="false">New session? Relevant memories <b>injected back in</b></li>
+                        </ul>
+                        <div class="mini-term"><span contenteditable="false">/plugin marketplace add thedotmack/claude-mem<br>/plugin install claude-mem</span></div>
+                    </div>
+                    <div class="mem-card glass-card reveal d4">
+                        <div class="nm">context-<span class="accent">mode</span></div>
+                        <div class="tg" contenteditable="false">keeps the current session lean</div>
+                        <ul>
+                            <li contenteditable="false"><b>Sandboxes noisy tool output</b> — only the useful part enters context</li>
+                            <li contenteditable="false">Session snapshots <b>survive compaction</b></li>
+                        </ul>
+                        <div class="mini-term"><span contenteditable="false">/plugin marketplace add mksglu/context-mode<br>/plugin install context-mode@context-mode</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="corner left">ACT III / POWER-UPS</div>
+            <div class="corner right">14</div>
+        </section>
+
+        <!-- ============ SLIDE 15: POLISH & SAFETY NETS ============ -->
+        <section class="slide s-pol" data-num="15" aria-label="frontend-design and code review">
+            <div class="glow g2"></div>
+            <div class="ring r2"></div>
+            <div class="frame"></div>
+
+            <div class="content-std">
+                <div class="pill reveal d1"><span class="dot"></span><span contenteditable="false">ACT III — POWER-UPS</span></div>
+                <h2 class="reveal d2" contenteditable="false">Polish &amp; <span class="accent">safety nets</span></h2>
+
+                <div class="duo2">
+                    <div class="mem-card glass-card reveal d3">
+                        <div class="nm">frontend-<span class="accent">design</span></div>
+                        <div class="tg" contenteditable="false">official Anthropic skill</div>
+                        <ul>
+                            <li contenteditable="false">UI output stops looking <b>AI-generated</b></li>
+                            <li contenteditable="false">This deck was built with <b>its sibling</b></li>
+                        </ul>
+                        <div class="mini-term"><span contenteditable="false">/plugin install frontend-design@claude-plugins-official</span></div>
+                    </div>
+                    <div class="mem-card glass-card reveal d4">
+                        <div class="nm">/code-<span class="accent">review</span></div>
+                        <div class="tg" contenteditable="false">built into Claude Code — no install</div>
+                        <svg class="fleet" width="520" height="230" viewBox="0 0 520 230" aria-hidden="true">
+                            <line x1="224" y1="94" x2="104" y2="58"/>
+                            <line x1="224" y1="94" x2="104" y2="158"/>
+                            <line x1="296" y1="94" x2="416" y2="58"/>
+                            <line x1="296" y1="94" x2="416" y2="158"/>
+                            <path class="ctr" d="M260 50 l38 22 v44 l-38 22 -38 -22 v-44 z"/>
+                            <text x="260" y="100" text-anchor="middle" style="fill:#1ED760">YOUR CODE</text>
+                            <path class="hexa" d="M80 32 l26 15 v30 l-26 15 -26 -15 v-30 z"/>
+                            <text x="80" y="116" text-anchor="middle">LOGIC</text>
+                            <path class="hexa" d="M80 132 l26 15 v30 l-26 15 -26 -15 v-30 z"/>
+                            <text x="80" y="216" text-anchor="middle">SECURITY</text>
+                            <path class="hexa" d="M440 32 l26 15 v30 l-26 15 -26 -15 v-30 z"/>
+                            <text x="440" y="116" text-anchor="middle">PERF</text>
+                            <path class="hexa" d="M440 132 l26 15 v30 l-26 15 -26 -15 v-30 z"/>
+                            <text x="440" y="216" text-anchor="middle">EDGES</text>
+                        </svg>
+                        <div class="gsd-cap" contenteditable="false">Ultra mode: a <b>cloud fleet of reviewers</b> — bugs verified before reported.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="corner left">ACT III / POWER-UPS</div>
+            <div class="corner right">15</div>
+        </section>
+
+        <!-- ============ SLIDE 16: CHEAT-SHEET ============ -->
+        <section class="slide s-cheat" data-num="16" aria-label="Cheat sheet">
+            <div class="glow g1"></div>
+            <div class="ring r1"></div>
+            <div class="frame"></div>
+            <div class="sweep"></div>
+
+            <div class="content-std">
+                <div class="pill reveal d1"><span class="dot"></span><span contenteditable="false">TAKE THIS HOME</span></div>
+                <h2 class="reveal d2" contenteditable="false">📸 Take a photo of <span class="accent">this slide</span></h2>
+
+                <div class="grid2">
+                    <div class="term reveal d3">
+                        <div class="term-bar"><i></i><i></i><i></i><span>everything we installed today</span></div>
+                        <div class="term-body" contenteditable="false">
+                            <div><span class="cmd">/plugin install skill-creator@claude-plugins-official</span></div>
+                            <div><span class="cmd">/plugin install superpowers@claude-plugins-official</span></div>
+                            <div><span class="cmd">npx get-shit-done-cc --claude --global</span> <span class="cm">← terminal</span></div>
+                            <div><span class="cmd">/plugin marketplace add mksglu/context-mode</span></div>
+                            <div><span class="cmd">/plugin install context-mode@context-mode</span></div>
+                            <div><span class="cmd">/plugin marketplace add thedotmack/claude-mem</span></div>
+                            <div><span class="cmd">/plugin install claude-mem</span></div>
+                            <div><span class="cmd">/plugin install frontend-design@claude-plugins-official</span></div>
+                        </div>
+                    </div>
+                    <div class="qrwrap reveal d4">
+                        <div class="qrbox">
+                            <div>assets/qr.png<br>optional QR →<br>full list online</div>
+                            <img src="assets/qr.png" alt="QR code to the command cheat-sheet" onerror="this.style.display='none'">
+                        </div>
+                        <div class="photo-cue" contenteditable="false">free to install · free to keep</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="corner left">ACT III / POWER-UPS</div>
+            <div class="corner right">16</div>
+        </section>
+
+        <!-- ============ SLIDE 17: CLOSING ============ -->
+        <section class="slide s-close" data-num="17" aria-label="Closing">
+            <div class="glow g1"></div><div class="glow g2"></div>
+            <div class="ring r1"></div><div class="ring r2"></div>
+            <div class="frame"></div>
+            <div class="sweep"></div>
+
+            <div class="center">
+                <div class="pill reveal d1"><span class="dot"></span><span contenteditable="false">QUESTIONS?</span></div>
+                <div class="big reveal d2" contenteditable="false">AI augments your fundamentals.<br><span class="accent">It doesn't replace them.</span></div>
+                <div class="small reveal d3" contenteditable="false">The fundamentals are how you check its work.</div>
+                <div class="contact-row reveal d4">
+                    <span class="contact" contenteditable="false"><b>in/</b> linkedin.com/in/···</span>
+                    <span class="contact" contenteditable="false"><b>gh/</b> github.com/···</span>
+                    <span class="contact" contenteditable="false"><b>@</b> edwardfrogz@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="corner left">THANK YOU</div>
+            <div class="corner right">17</div>
+        </section>
+
     </main>
 </div>
 
@@ -1142,7 +1454,7 @@ const deck = new SlidePresentation();
    Edits persist to localStorage (per deck version);
    Ctrl/Cmd+S downloads the edited HTML file.
    =========================================== */
-const DECK_VERSION = 'act2-1';   // bumped on every build task so stale edits never mask new slides
+const DECK_VERSION = 'act3-1';   // bumped on every build task so stale edits never mask new slides
 const editor = {
     isActive: false,
     key: 'deck-edits:' + DECK_VERSION,
