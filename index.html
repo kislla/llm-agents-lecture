@@ -567,12 +567,10 @@ img, video, canvas, svg {
 .contact-row { display: flex; gap: 24px; }
 .contact { border: 1px solid var(--line); border-radius: 999px; padding: 14px 34px; font-family: var(--font-mono); font-size: 22px; color: var(--text-dim); background: rgba(29,185,84,0.06); }
 .contact b { color: var(--green-bright); font-weight: 600; }
-.s-close .connect { display: flex; align-items: center; gap: 60px; }
-.s-close .connect-contacts { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
-.s-close .connect-qr { display: flex; flex-direction: column; align-items: center; gap: 12px; }
-.s-close .qr-card { width: 172px; height: 172px; background: #fff; border-radius: 16px; padding: 12px; border: 1px solid var(--line); box-shadow: 0 0 46px rgba(29,185,84,0.18); }
+.s-close .connect { display: flex; flex-direction: column; align-items: center; gap: 24px; }
+.s-close .qr-card { width: 360px; height: 360px; background: #fff; border-radius: 22px; padding: 18px; border: 1px solid var(--line); box-shadow: 0 0 70px rgba(29,185,84,0.24); }
 .s-close .qr-card img { width: 100%; height: 100%; display: block; }
-.s-close .qr-cap { font-family: var(--font-mono); font-size: 18px; letter-spacing: 3px; color: var(--text-faint); text-transform: uppercase; }
+.s-close .connect .contact { font-size: 26px; padding: 16px 40px; }
 
 /* ===========================================
    DECK CHROME (outside the stage)
@@ -1322,15 +1320,8 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
                 <div class="big reveal d2" contenteditable="false">AI augments your fundamentals.<br><span class="accent">It doesn't replace them.</span></div>
                 <div class="small reveal d3" contenteditable="false">The fundamentals are how you check its work.</div>
                 <div class="connect reveal d4">
-                    <div class="connect-contacts">
-                        <span class="contact" contenteditable="false"><b>in/</b> linkedin.com/in/kisller</span>
-                        <span class="contact" contenteditable="false"><b>gh/</b> github.com/kislla</span>
-                        <span class="contact" contenteditable="false"><b>@</b> edwardfrogz@gmail.com</span>
-                    </div>
-                    <div class="connect-qr">
-                        <div class="qr-card"><img src="assets/linkedin-qr.png" alt="LinkedIn QR — linkedin.com/in/kisller" onerror="this.parentNode.style.display='none'"></div>
-                        <div class="qr-cap">scan to connect</div>
-                    </div>
+                    <div class="qr-card"><img src="assets/linkedin-qr.png" alt="LinkedIn QR — linkedin.com/in/kisller" onerror="this.parentNode.style.display='none'"></div>
+                    <span class="contact" contenteditable="false"><b>in/</b> linkedin.com/in/kisller</span>
                 </div>
             </div>
 
@@ -1468,7 +1459,7 @@ const deck = new SlidePresentation();
    Edits persist to localStorage (per deck version);
    Ctrl/Cmd+S downloads the edited HTML file.
    =========================================== */
-const DECK_VERSION = 'act3-2';   // bumped on every build task so stale edits never mask new slides
+const DECK_VERSION = 'act3-3';   // bumped on every build task so stale edits never mask new slides
 const editor = {
     isActive: false,
     key: 'deck-edits:' + DECK_VERSION,
