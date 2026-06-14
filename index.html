@@ -342,11 +342,12 @@ img, video, canvas, svg {
 /* ===== SLIDE 2: ABOUT ME ===== */
 .s-about .cols { display: grid; grid-template-columns: 460px 1fr; gap: 80px; margin-top: 56px; align-items: center; }
 .headshot {
-    width: 440px; height: 480px; border-radius: 30px; position: relative;
-    border: 2px dashed rgba(30,215,96,0.4);
+    width: 440px; height: 480px; border-radius: 30px; position: relative; overflow: hidden;
+    border: 1px solid rgba(30,215,96,0.55); box-shadow: 0 0 60px rgba(29,185,84,0.22);
     background: linear-gradient(150deg, rgba(29,185,84,0.14), rgba(18,18,18,0.4));
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
 }
+.headshot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: inherit; filter: grayscale(1) contrast(1.05); }
 .headshot .init { font-family: var(--font-display); font-weight: 700; font-size: 120px; color: rgba(30,215,96,0.5); }
 .headshot .cap { font-family: var(--font-mono); font-size: 19px; color: var(--text-faint); letter-spacing: 2px; }
 .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
@@ -617,7 +618,7 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             </svg>
 
             <div class="content">
-                <div class="pill reveal d1"><span class="dot"></span><span contenteditable="false">ARIEL UNIVERSITY · CS LECTURE</span></div>
+                <div class="pill reveal d1"><span class="dot"></span><span contenteditable="false">Academic College of Tel Aviv-Yafo · Agentic Driven Development </span></div>
                 <h1 class="reveal d2" contenteditable="false">Level Up:<br>LLM Agents &amp;<br><span class="accent">Claude Desktop</span></h1>
                 <p class="sub reveal d3" contenteditable="false">Automating your day-to-day CS workflow with <b>Skills</b>, <b>Plugins</b>, and <b>MCP</b></p>
             </div>
@@ -627,7 +628,7 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
                     <div class="avatar">EK</div>
                     <div>
                         <div class="name" contenteditable="false">Edward Kisller</div>
-                        <div class="role" contenteditable="false">Senior Solutions Developer · Sport Climbing Instructor</div>
+                        <div class="role" contenteditable="false">Senior Solutions Developer · Business Automation Advocate</div>
                     </div>
                 </div>
                 <div class="kbd">navigate<span>→</span></div>
@@ -646,6 +647,7 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
 
                 <div class="cols">
                     <div class="headshot reveal d3">
+                        <img src="assets/headshot.jpg" alt="Edward Kisller climbing an overhang" onerror="this.style.display='none'">
                         <div class="init">EK</div>
                         <div class="cap">assets/headshot.jpg</div>
                     </div>
@@ -658,7 +660,7 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
                         <div class="fact glass-card reveal d4">
                             <div class="ico">🎓</div>
                             <div class="lbl">THE BACKGROUND</div>
-                            <div class="val" contenteditable="false">BSc Math &amp; Computer Science<small>right here at Ariel University</small></div>
+                            <div class="val" contenteditable="false">BSc Math &amp; Computer Science<small>Ariel University</small></div>
                         </div>
                         <div class="fact glass-card reveal d5">
                             <div class="ico">🧗</div>
@@ -1459,7 +1461,7 @@ const deck = new SlidePresentation();
    Edits persist to localStorage (per deck version);
    Ctrl/Cmd+S downloads the edited HTML file.
    =========================================== */
-const DECK_VERSION = 'act3-3';   // bumped on every build task so stale edits never mask new slides
+const DECK_VERSION = 'act3-4';   // bumped on every build task so stale edits never mask new slides
 const editor = {
     isActive: false,
     key: 'deck-edits:' + DECK_VERSION,

@@ -8,8 +8,8 @@
 - Speaker notes + demo runbook: `docs/speaker-notes.md`
 
 ## Before presenting (Edward's checklist)
-- [ ] Add headshot to `assets/headshot.jpg` (slide 2)
-- [ ] Fill contact links on slide 17
+- [x] Add headshot to `assets/headshot.jpg` (slide 2)
+- [x] Fill contact links on slide 17 (LinkedIn QR + handle; GitHub/email dropped by choice)
+- [x] QR for slide 16 → public gist https://gist.github.com/kislla/11b839e992e0d16e1913d589ba83589c (`assets/qr.png`)
 - [ ] Rehearse the demo once; screenshot the build + the result into `assets/fallback/` and swap into hidden slides 11a/11b
-- [ ] Optional QR for slide 16: publish `docs/cheatsheet.md` (e.g. `gh gist create --public docs/cheatsheet.md`), then `npx --yes qrcode "<url>" -o assets/qr.png` (gh wasn't installed at build time)
 - [ ] Walk the whole deck with wifi OFF
