@@ -11,5 +11,5 @@
 - [x] Add headshot to `assets/headshot.jpg` (slide 2)
 - [x] Fill contact links on slide 17 (LinkedIn QR + handle; GitHub/email dropped by choice)
 - [x] QR for slide 16 → public gist https://gist.github.com/kislla/11b839e992e0d16e1913d589ba83589c (`assets/qr.png`)
-- [ ] Rehearse the demo once; screenshot the build + the result into `assets/fallback/` and swap into hidden slides 11a/11b
+- [ ] Rehearse the demo once; screenshot the build + the result into `assets/fallback/` and swap into hidden slides 12a/12b
 - [ ] Walk the whole deck with wifi OFF

@@ -377,6 +377,15 @@ img, video, canvas, svg {
 .tier .for b { color: var(--text); font-weight: 600; }
 .tier.lit { border: 1px solid rgba(30,215,96,0.55); background: linear-gradient(135deg, rgba(29,185,84,0.16), rgba(29,185,84,0.03)); box-shadow: 0 0 70px rgba(29,185,84,0.18); }
 .tier.lit .glyph, .tier.lit h3 { color: var(--green-bright); }
+/* ===== SLIDE 5: LLM TOOLS LANDSCAPE ===== */
+.s-landscape .cats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 22px; margin-top: 50px; }
+.lcat { padding: 30px 24px; min-height: 430px; display: flex; flex-direction: column; }
+.lcat .glyph { font-family: var(--font-mono); font-size: 26px; color: var(--green-bright); letter-spacing: 1px; }
+.lcat h3 { margin-top: 20px; font-family: var(--font-display); font-weight: 600; font-size: 30px; color: var(--text); line-height: 1.12; }
+.lcat .what { margin-top: 12px; font-family: var(--font-body); font-weight: 300; font-size: 22px; color: var(--text-dim); line-height: 1.4; }
+.lcat .ex { margin-top: auto; display: flex; flex-direction: column; gap: 9px; padding-top: 22px; }
+.lcat .ex span { font-family: var(--font-mono); font-size: 20px; color: var(--text); }
+.lcat .ex span.hl { color: var(--green-bright); }
 
 /* ===== SLIDE 5: JARGON I ===== */
 .s-jargon1 .rows { display: flex; flex-direction: column; gap: 34px; margin-top: 56px; }
@@ -755,8 +764,58 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             <div class="corner right">04</div>
         </section>
 
+        <!-- ============ SLIDE 5: LLM TOOLS LANDSCAPE ============ -->
+        <section class="slide s-landscape" data-num="05" aria-label="LLM tools landscape">
+            <div class="glow g2"></div>
+            <div class="ring r2"></div>
+            <div class="frame"></div>
+
+            <div class="content-std">
+                <div class="pill reveal d1"><span class="dot"></span><span contenteditable="false">THE WIDER LANDSCAPE</span></div>
+                <h2 class="reveal d2" contenteditable="false">It's not just <span class="accent">chatbots</span> anymore</h2>
+
+                <div class="cats">
+                    <div class="lcat glass-card reveal d3">
+                        <div class="glyph">[ ask ]</div>
+                        <h3 contenteditable="false">Chats</h3>
+                        <div class="what" contenteditable="false">Conversational Q&amp;A and drafting</div>
+                        <div class="ex"><span class="hl">Claude</span><span>ChatGPT</span><span>Gemini</span></div>
+                    </div>
+                    <div class="lcat glass-card reveal d3">
+                        <div class="glyph">[ gen ]</div>
+                        <h3 contenteditable="false">Media generators</h3>
+                        <div class="what" contenteditable="false">Images, video, voice &amp; music</div>
+                        <div class="ex"><span>Midjourney</span><span>Sora</span><span>ElevenLabs</span></div>
+                    </div>
+                    <div class="lcat glass-card reveal d4">
+                        <div class="glyph">[ build ]</div>
+                        <h3 contenteditable="false">Vibe-coding</h3>
+                        <div class="what" contenteditable="false">Prompt &rarr; a working web app</div>
+                        <div class="ex"><span>Lovable</span><span>Base44</span><span>v0</span></div>
+                    </div>
+                    <div class="lcat glass-card reveal d4">
+                        <div class="glyph">[ wire ]</div>
+                        <h3 contenteditable="false">Automation</h3>
+                        <div class="what" contenteditable="false">Wire tools into workflows</div>
+                        <div class="ex"><span>n8n</span><span>Make</span><span>Zapier</span></div>
+                    </div>
+                    <div class="lcat glass-card reveal d5">
+                        <div class="glyph">[ code ]</div>
+                        <h3 contenteditable="false">Coding agents</h3>
+                        <div class="what" contenteditable="false">Agents that work in your codebase</div>
+                        <div class="ex"><span class="hl">Claude Code</span><span>Antigravity</span><span>Cursor</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottomline reveal d6" contenteditable="false">One pattern underneath them all: <b>you describe the outcome &mdash; the model does the work.</b></div>
+
+            <div class="corner left">ACT I / FOUNDATIONS</div>
+            <div class="corner right">05</div>
+        </section>
+
         <!-- ============ SLIDE 5: JARGON I — TOKENS, CONTEXT, SESSIONS ============ -->
-        <section class="slide s-jargon1" data-num="05" aria-label="Tokens, context, sessions">
+        <section class="slide s-jargon1" data-num="06" aria-label="Tokens, context, sessions">
             <div class="glow g2"></div>
             <div class="ring r2"></div>
             <div class="frame"></div>
@@ -789,11 +848,11 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             </div>
 
             <div class="corner left">ACT I / FOUNDATIONS</div>
-            <div class="corner right">05</div>
+            <div class="corner right">06</div>
         </section>
 
         <!-- ============ SLIDE 6: JARGON II — AGENTS, SUB-AGENTS, MCP ============ -->
-        <section class="slide s-jargon2" data-num="06" aria-label="Agents and MCP">
+        <section class="slide s-jargon2" data-num="07" aria-label="Agents and MCP">
             <div class="glow g1"></div>
             <div class="ring r1"></div>
             <div class="frame"></div>
@@ -841,11 +900,11 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             </div>
 
             <div class="corner left">ACT I / FOUNDATIONS</div>
-            <div class="corner right">06</div>
+            <div class="corner right">07</div>
         </section>
 
         <!-- ============ SLIDE 7: PLUGINS VS SKILLS ============ -->
-        <section class="slide s-plugin" data-num="07" aria-label="Plugins vs skills">
+        <section class="slide s-plugin" data-num="08" aria-label="Plugins vs skills">
             <div class="glow g2"></div>
             <div class="ring r2"></div>
             <div class="frame"></div>
@@ -898,11 +957,11 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
 
             <div class="bottomline reveal d6" contenteditable="false">Stop re-typing giant prompts. <b>Invoke expertise.</b></div>
             <div class="corner left">ACT I / FOUNDATIONS</div>
-            <div class="corner right">07</div>
+            <div class="corner right">08</div>
         </section>
 
         <!-- ============ SLIDE 8: THE "/" COMMAND PALETTE ============ -->
-        <section class="slide s-palette" data-num="08" aria-label="Command palette">
+        <section class="slide s-palette" data-num="09" aria-label="Command palette">
             <div class="glow g1"></div>
             <div class="ring r1"></div>
             <div class="frame"></div>
@@ -927,7 +986,7 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
 
             <div class="bottomline reveal d5" contenteditable="false">Install plugins, invoke skills, manage your AI environment — <b>from the chat input</b></div>
             <div class="corner left">ACT I / FOUNDATIONS</div>
-            <div class="corner right">08</div>
+            <div class="corner right">09</div>
         </section>
 
         <!-- ============ DIVIDER A → ACT II ============ -->
@@ -944,7 +1003,7 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
         </section>
 
         <!-- ============ SLIDE 9: SKILL-CREATOR (layout probe) ============ -->
-        <section class="slide s-skillcreator" data-num="09" aria-label="skill-creator">
+        <section class="slide s-skillcreator" data-num="10" aria-label="skill-creator">
             <div class="glow g2"></div>
             <div class="ring r2"></div>
             <div class="frame"></div>
@@ -994,11 +1053,11 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             </div>
 
             <div class="corner left">ACT II / SKILLS</div>
-            <div class="corner right">09</div>
+            <div class="corner right">10</div>
         </section>
 
         <!-- ============ SLIDE 10: ANATOMY OF A SKILL ============ -->
-        <section class="slide s-anatomy" data-num="10" aria-label="Anatomy of a skill">
+        <section class="slide s-anatomy" data-num="11" aria-label="Anatomy of a skill">
             <div class="glow g1"></div>
             <div class="ring r1"></div>
             <div class="frame"></div>
@@ -1040,11 +1099,11 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             </div>
 
             <div class="corner left">ACT II / SKILLS</div>
-            <div class="corner right">10</div>
+            <div class="corner right">11</div>
         </section>
 
         <!-- ============ SLIDE 11: LIVE DEMO ============ -->
-        <section class="slide s-live" data-num="11" data-branch=".s-fb" aria-label="Live demo">
+        <section class="slide s-live" data-num="12" data-branch=".s-fb" aria-label="Live demo">
             <div class="glow g2"></div>
             <div class="frame" style="border-color: rgba(30,215,96,0.12);"></div>
             <div class="center">
@@ -1056,7 +1115,7 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
         </section>
 
         <!-- ============ HIDDEN 11a: FALLBACK — THE BUILD ============ -->
-        <section class="slide s-fb" data-num="11a" data-hidden="true" aria-label="Fallback: the build">
+        <section class="slide s-fb" data-num="12a" data-hidden="true" aria-label="Fallback: the build">
             <div class="glow g1"></div>
             <div class="frame"></div>
             <div class="content-std">
@@ -1068,11 +1127,11 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
                 </div>
             </div>
             <div class="corner left">BACKUP / [B] OR ESC TO RETURN</div>
-            <div class="corner right">11a</div>
+            <div class="corner right">12a</div>
         </section>
 
         <!-- ============ HIDDEN 11b: FALLBACK — THE RESULT ============ -->
-        <section class="slide s-fb" data-num="11b" data-hidden="true" aria-label="Fallback: the result">
+        <section class="slide s-fb" data-num="12b" data-hidden="true" aria-label="Fallback: the result">
             <div class="glow g2"></div>
             <div class="frame"></div>
             <div class="content-std">
@@ -1084,7 +1143,7 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
                 </div>
             </div>
             <div class="corner left">BACKUP / [B] OR ESC TO RETURN</div>
-            <div class="corner right">11b</div>
+            <div class="corner right">12b</div>
         </section>
 
         <!-- ============ DIVIDER B → ACT III ============ -->
@@ -1101,7 +1160,7 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
         </section>
 
         <!-- ============ SLIDE 12: SUPERPOWERS ============ -->
-        <section class="slide s-sp" data-num="12" aria-label="superpowers">
+        <section class="slide s-sp" data-num="13" aria-label="superpowers">
             <div class="glow g1"></div>
             <div class="ring r1"></div>
             <div class="frame"></div>
@@ -1145,11 +1204,11 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             </div>
 
             <div class="corner left">ACT III / POWER-UPS</div>
-            <div class="corner right">12</div>
+            <div class="corner right">13</div>
         </section>
 
         <!-- ============ SLIDE 13: GSD ============ -->
-        <section class="slide s-gsd" data-num="13" aria-label="get-shit-done">
+        <section class="slide s-gsd" data-num="14" aria-label="get-shit-done">
             <div class="glow g2"></div>
             <div class="ring r2"></div>
             <div class="frame"></div>
@@ -1184,17 +1243,17 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             </div>
 
             <div class="corner left">ACT III / POWER-UPS</div>
-            <div class="corner right">13</div>
+            <div class="corner right">14</div>
         </section>
 
         <!-- ============ SLIDE 14: FIXING THE AMNESIA ============ -->
-        <section class="slide s-mem" data-num="14" aria-label="Memory plugins">
+        <section class="slide s-mem" data-num="15" aria-label="Memory plugins">
             <div class="glow g1"></div>
             <div class="ring r1"></div>
             <div class="frame"></div>
 
             <div class="content-std">
-                <div class="pill reveal d1"><span class="dot"></span><span contenteditable="false">ACT III — POWER-UPS · REMEMBER SLIDE 5? SESSIONS DIE.</span></div>
+                <div class="pill reveal d1"><span class="dot"></span><span contenteditable="false">ACT III — POWER-UPS · REMEMBER SLIDE 6? SESSIONS DIE.</span></div>
                 <h2 class="reveal d2" contenteditable="false">Fixing the <span class="accent">amnesia</span></h2>
 
                 <div class="duo2">
@@ -1220,11 +1279,11 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             </div>
 
             <div class="corner left">ACT III / POWER-UPS</div>
-            <div class="corner right">14</div>
+            <div class="corner right">15</div>
         </section>
 
         <!-- ============ SLIDE 15: POLISH & SAFETY NETS ============ -->
-        <section class="slide s-pol" data-num="15" aria-label="frontend-design and code review">
+        <section class="slide s-pol" data-num="16" aria-label="frontend-design and code review">
             <div class="glow g2"></div>
             <div class="ring r2"></div>
             <div class="frame"></div>
@@ -1268,11 +1327,11 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             </div>
 
             <div class="corner left">ACT III / POWER-UPS</div>
-            <div class="corner right">15</div>
+            <div class="corner right">16</div>
         </section>
 
         <!-- ============ SLIDE 16: CHEAT-SHEET ============ -->
-        <section class="slide s-cheat" data-num="16" aria-label="Cheat sheet">
+        <section class="slide s-cheat" data-num="17" aria-label="Cheat sheet">
             <div class="glow g1"></div>
             <div class="ring r1"></div>
             <div class="frame"></div>
@@ -1307,11 +1366,11 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             </div>
 
             <div class="corner left">ACT III / POWER-UPS</div>
-            <div class="corner right">16</div>
+            <div class="corner right">17</div>
         </section>
 
         <!-- ============ SLIDE 17: CLOSING ============ -->
-        <section class="slide s-close" data-num="17" aria-label="Closing">
+        <section class="slide s-close" data-num="18" aria-label="Closing">
             <div class="glow g1"></div><div class="glow g2"></div>
             <div class="ring r1"></div><div class="ring r2"></div>
             <div class="frame"></div>
@@ -1328,7 +1387,7 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             </div>
 
             <div class="corner left">THANK YOU</div>
-            <div class="corner right">17</div>
+            <div class="corner right">18</div>
         </section>
 
     </main>
@@ -1461,7 +1520,7 @@ const deck = new SlidePresentation();
    Edits persist to localStorage (per deck version);
    Ctrl/Cmd+S downloads the edited HTML file.
    =========================================== */
-const DECK_VERSION = 'act3-4';   // bumped on every build task so stale edits never mask new slides
+const DECK_VERSION = 'landscape-1';   // bumped on every build task so stale edits never mask new slides
 const editor = {
     isActive: false,
     key: 'deck-edits:' + DECK_VERSION,

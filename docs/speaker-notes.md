@@ -46,7 +46,17 @@
 
 ---
 
-## Slide 5 — Jargon I: Tokens, Context, Sessions
+## Slide 5 — The Wider Landscape (tool catalog)
+
+- The wider ecosystem beyond chat — five flavors: chats, media generators, vibe-coding app builders, automation platforms, coding agents.
+- Land the ones they may not know yet: Lovable & Base44 (prompt → a working web app), n8n (wire tools into workflows), Antigravity & Claude Code (agents that work in your codebase).
+- Throughline: same pattern everywhere — you describe the outcome, the model does the work. Slide 4 was the *concept* (chat → delegate); this is the *catalog*.
+
+→ You've seen the tools — now let's get the vocabulary straight: tokens, context, sessions.
+
+---
+
+## Slide 6 — Jargon I: Tokens, Context, Sessions
 
 - Tokens = sub-word units (~4 chars) — the "machine word" of LLMs.
 - Context window = the model's RAM — ~200K tokens on modern Claude models.
@@ -57,7 +67,7 @@
 
 ---
 
-## Slide 6 — Jargon II: Agents, Sub-agents, MCP
+## Slide 7 — Jargon II: Agents, Sub-agents, MCP
 
 - Agent = LLM + tools + a loop: plan → act → observe → repeat.
 - Sub-agents = child processes spawned with fresh, clean context.
@@ -68,7 +78,7 @@
 
 ---
 
-## Slide 7 — Plugins vs Skills
+## Slide 8 — Plugins vs Skills
 
 - Skill = a folder with SKILL.md teaching Claude one job, loaded on demand.
 - Plugin = the package that ships skills (+ MCP servers, hooks).
@@ -79,7 +89,7 @@
 
 ---
 
-## Slide 8 — The "/" Command Palette
+## Slide 9 — The "/" Command Palette
 
 - Typing `/` opens the command dropdown — your gateway to everything.
 - Two commands to remember: `/plugin marketplace add` and `/plugin install`.
@@ -100,7 +110,7 @@
 
 ---
 
-## Slide 9 — skill-creator: The Skill That Builds Skills
+## Slide 10 — skill-creator: The Skill That Builds Skills
 
 - Describe the job in plain English → Claude drafts, tests, and packages it.
 - "The factory that builds the tools."
@@ -111,7 +121,7 @@
 
 ---
 
-## Slide 10 — Anatomy of a Skill
+## Slide 11 — Anatomy of a Skill
 
 - Annotated SKILL.md: frontmatter `name` + `description` (the trigger) — that's what Claude scans.
 - Then the instruction body, plus optional scripts.
@@ -122,7 +132,7 @@
 
 ---
 
-## Slide 11 — LIVE DEMO
+## Slide 12 — LIVE DEMO
 
 **[Full runbook below — read before presenting]**
 
@@ -135,30 +145,30 @@
 1. Invoke skill-creator.
 2. Prompt: *"Create a skill that searches for open software engineering positions on LinkedIn."*
 3. Narrate skill-creator's clarifying questions as they appear.
-4. Show the generated folder + SKILL.md — callback to slide 10's anatomy.
+4. Show the generated folder + SKILL.md — callback to slide 11's anatomy.
 5. Run the new skill once.
 
 **Failure playbook**
 - LinkedIn/wifi misbehaves → the lesson is the *skill creation*: show the generated SKILL.md, skip the run.
 - Build stalls → run the pre-existing `linkedin-job-scraper` skill instead.
-- Claude Desktop down → hidden slides 11a/11b tell the story in screenshots.
+- Claude Desktop down → hidden slides 12a/12b tell the story in screenshots.
 
-→ If everything went well — that's the skill in action. If it didn't, here's the same story in pictures (jump to 11a/11b only on failure).
+→ If everything went well — that's the skill in action. If it didn't, here's the same story in pictures (jump to 12a/12b only on failure).
 
 ---
 
-## Slide 11a — Hidden Fallback (skill-creator conversation)
+## Slide 12a — Hidden Fallback (skill-creator conversation)
 
-- Navigation: press **B** on the LIVE DEMO slide to jump here. Arrows move between 11a/11b; **B** or **Esc** returns to slide 11. Normal arrow flow never shows these.
+- Navigation: press **B** on the LIVE DEMO slide to jump here. Arrows move between 12a/12b; **B** or **Esc** returns to slide 12. Normal arrow flow never shows these.
 - Pre-baked screenshots of the skill-creator conversation + the generated file tree.
 - Use only if the live demo fails before the run step.
-- Walk through it exactly as if it just happened live — same callback to slide 10's anatomy.
+- Walk through it exactly as if it just happened live — same callback to slide 11's anatomy.
 
 → And here's what it looks like once that skill actually runs.
 
 ---
 
-## Slide 11b — Hidden Fallback (skill running)
+## Slide 12b — Hidden Fallback (skill running)
 
 - Pre-baked screenshots of the skill running with real job results.
 - Use only if the live demo failed at or after the run step.
@@ -178,7 +188,7 @@
 
 ---
 
-## Slide 12 — superpowers
+## Slide 13 — superpowers
 
 - Discipline for Claude: brainstorm → plan → test-first → two-stage review.
 - "Makes Claude work like a senior engineer, not an eager intern."
@@ -189,18 +199,18 @@
 
 ---
 
-## Slide 13 — GSD (get-shit-done)
+## Slide 14 — GSD (get-shit-done)
 
 - Context rot: long sessions degrade — as the chat history grows, the model's focus dilutes.
 - GSD spawns fresh sub-agents per task, each with clean context.
 - Adds quality gates and an autonomous mode on top.
 - Install: `npx get-shit-done-cc --claude --global`.
 
-→ Fresh context per task is great — but what about memory *across* sessions? That's the amnesia problem from slide 5.
+→ Fresh context per task is great — but what about memory *across* sessions? That's the amnesia problem from slide 6.
 
 ---
 
-## Slide 14 — Fixing the Amnesia
+## Slide 15 — Fixing the Amnesia
 
 - **claude-mem**: auto-captures each session into a local searchable DB, injects relevant memories into new sessions.
   - `/plugin marketplace add thedotmack/claude-mem` + `/plugin install claude-mem`.
@@ -213,7 +223,7 @@
 
 ---
 
-## Slide 15 — Polish & Safety Nets
+## Slide 16 — Polish & Safety Nets
 
 - **frontend-design**: official skill, stops UI output looking AI-generated — "this deck used its sibling."
   - `/plugin install frontend-design@claude-plugins-official`.
@@ -224,7 +234,7 @@
 
 ---
 
-## Slide 16 — The Cheat-Sheet
+## Slide 17 — The Cheat-Sheet
 
 - "Take a photo of this slide" — say it explicitly, pause for phones.
 - One terminal-style block with all seven install commands from today.
@@ -235,7 +245,7 @@
 
 ---
 
-## Slide 17 — Closing
+## Slide 18 — Closing
 
 - "AI augments your fundamentals — it doesn't replace them."
 - The fundamentals are how you check its work.
