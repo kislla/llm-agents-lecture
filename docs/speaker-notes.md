@@ -71,7 +71,7 @@
 
 - Agent = LLM + tools + a loop: plan → act → observe → repeat.
 - Sub-agents = child processes spawned with fresh, clean context.
-- MCP = one open standard connecting the model to terminal, browser, Jira, anything — think "USB-C for AI".
+- MCP = one open standard connecting the model to terminal, browser, Telegram, anything — think "USB-C for AI".
 - This is the plumbing that makes everything in Act II and III possible.
 
 → With agents and MCP defined, here's how Claude actually packages capabilities — plugins and skills.
