@@ -149,12 +149,12 @@
 3. Narrate the clarifying questions; show the generated folder + SKILL.md — callback to slide 11's anatomy; run the new skill once.
 
 *Demo 2 — software, one-shot (coding agent):*
-4. Fresh prompt: *"Build a playable Snake game in a single HTML file."*
-5. Let Claude write the whole file in one go; open it in the browser and play for ~10 seconds. This is the "Claude writes real, working software" beat — a different muscle from Demo 1's skill-building.
+4. Fresh prompt: *"Create a software coding example."* (give Claude a concrete task live — e.g. a small web app, a script, or an algorithm visualizer.)
+5. Let Claude write it in one go, then run or show the result. This is the "Claude writes real, working software" beat — a different muscle from Demo 1's skill-building.
 
 **Failure playbook**
 - Demo 1 — LinkedIn/wifi misbehaves → the lesson is the *skill creation*: show the generated SKILL.md, skip the run. Build stalls → run the pre-existing `linkedin-job-scraper` skill instead. Claude Desktop down → hidden slides 12a/12b tell the story in screenshots.
-- Demo 2 — if the app misbehaves → just show the generated code (the point is Claude produced a complete program), or paste a pre-made version.
+- Demo 2 — if it misbehaves → just show the generated code (the point is Claude produced working software), or fall back to a pre-made version.
 
 → If everything went well — that's a skill *and* a working app, built live. If it didn't, here's the same story in pictures (jump to 12a/12b only on failure).
 
