@@ -494,11 +494,15 @@ img, video, canvas, svg {
 .s-live .recdot { width: 22px; height: 22px; border-radius: 50%; background: #ff4136; box-shadow: 0 0 32px rgba(255,65,54,0.85); animation: pulse 1.4s infinite; }
 .s-live h2 { font-family: var(--font-display); font-weight: 700; font-size: 188px; letter-spacing: 6px; color: var(--text); text-shadow: 0 0 110px rgba(30,215,96,0.45); }
 .s-live h2 .accent { color: var(--green-bright); }
+.s-live .prompts { display: flex; flex-direction: column; gap: 20px; }
 .s-live .prompt-line {
-    font-family: var(--font-mono); font-size: 27px; color: var(--text-dim); line-height: 1.6;
-    border: 1px solid var(--line-faint); border-radius: 14px; padding: 20px 36px;
-    background: rgba(25,20,20,0.85); max-width: 1560px;
+    display: flex; align-items: center; gap: 20px;
+    font-family: var(--font-mono); font-size: 27px; color: var(--text-dim); line-height: 1.5;
+    border: 1px solid var(--line-faint); border-radius: 14px; padding: 20px 34px;
+    background: rgba(25,20,20,0.85); width: 1560px;
 }
+.s-live .prompt-line .num { flex: none; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); color: var(--green-bright); font-family: var(--font-display); font-weight: 700; font-size: 21px; display: grid; place-items: center; }
+.s-live .prompt-line .cmd { flex: 1; }
 .s-live .prompt-line .p { color: var(--green-bright); }
 .s-live .bhint { position: absolute; bottom: 80px; right: 96px; font-family: var(--font-mono); font-size: 18px; letter-spacing: 2px; color: var(--text-faint); }
 
@@ -1109,7 +1113,16 @@ body.editing .slide.active [contenteditable] { outline: 1px dashed rgba(30,215,9
             <div class="center">
                 <div class="reclabel reveal d1"><span class="recdot"></span>REC</div>
                 <h2 class="reveal d2" contenteditable="false">LIVE <span class="accent">DEMO</span></h2>
-                <div class="prompt-line reveal d3" contenteditable="false"><span class="p">&gt;</span> Create a skill that searches for open software engineering positions on LinkedIn</div>
+                <div class="prompts">
+                    <div class="prompt-line reveal d3">
+                        <span class="num">1</span>
+                        <span class="cmd" contenteditable="false"><span class="p">&gt;</span> Create a skill that searches for open software engineering positions on LinkedIn</span>
+                    </div>
+                    <div class="prompt-line reveal d4">
+                        <span class="num">2</span>
+                        <span class="cmd" contenteditable="false"><span class="p">&gt;</span> Build a playable Snake game in a single HTML file</span>
+                    </div>
+                </div>
             </div>
             <div class="bhint">[B] BACKUP</div>
         </section>
@@ -1520,7 +1533,7 @@ const deck = new SlidePresentation();
    Edits persist to localStorage (per deck version);
    Ctrl/Cmd+S downloads the edited HTML file.
    =========================================== */
-const DECK_VERSION = 'landscape-1';   // bumped on every build task so stale edits never mask new slides
+const DECK_VERSION = 'demo2-1';   // bumped on every build task so stale edits never mask new slides
 const editor = {
     isActive: false,
     key: 'deck-edits:' + DECK_VERSION,

@@ -141,19 +141,22 @@
 - Bump Claude Desktop font size; enable Do Not Disturb; close personal windows.
 - A `linkedin-job-scraper` skill already exists in Edward's environment (earlier experiment). Decision: keep it installed as the live fallback; phrase the demo prompt so skill-creator builds a fresh, differently-named skill.
 
-**The demo (~10–12 min, hard stop)**
+**The demos (~12–15 min, hard stop) — two quick ones**
+
+*Demo 1 — a skill (skill-creator):*
 1. Invoke skill-creator.
 2. Prompt: *"Create a skill that searches for open software engineering positions on LinkedIn."*
-3. Narrate skill-creator's clarifying questions as they appear.
-4. Show the generated folder + SKILL.md — callback to slide 11's anatomy.
-5. Run the new skill once.
+3. Narrate the clarifying questions; show the generated folder + SKILL.md — callback to slide 11's anatomy; run the new skill once.
+
+*Demo 2 — software, one-shot (coding agent):*
+4. Fresh prompt: *"Build a playable Snake game in a single HTML file."*
+5. Let Claude write the whole file in one go; open it in the browser and play for ~10 seconds. This is the "Claude writes real, working software" beat — a different muscle from Demo 1's skill-building.
 
 **Failure playbook**
-- LinkedIn/wifi misbehaves → the lesson is the *skill creation*: show the generated SKILL.md, skip the run.
-- Build stalls → run the pre-existing `linkedin-job-scraper` skill instead.
-- Claude Desktop down → hidden slides 12a/12b tell the story in screenshots.
+- Demo 1 — LinkedIn/wifi misbehaves → the lesson is the *skill creation*: show the generated SKILL.md, skip the run. Build stalls → run the pre-existing `linkedin-job-scraper` skill instead. Claude Desktop down → hidden slides 12a/12b tell the story in screenshots.
+- Demo 2 — if the app misbehaves → just show the generated code (the point is Claude produced a complete program), or paste a pre-made version.
 
-→ If everything went well — that's the skill in action. If it didn't, here's the same story in pictures (jump to 12a/12b only on failure).
+→ If everything went well — that's a skill *and* a working app, built live. If it didn't, here's the same story in pictures (jump to 12a/12b only on failure).
 
 ---
 
